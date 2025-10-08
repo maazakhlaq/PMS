@@ -1,0 +1,33 @@
+"use client";
+import React, { ReactNode } from "react";
+
+interface CommonFormCardProps {
+  children: ReactNode;
+  className?: string;
+  title?: string;
+  cols?: number; // 👈 optional prop for default columns
+}
+
+const CommonFormCard: React.FC<CommonFormCardProps> = ({
+  children,
+  className = "",
+  title,
+  cols = 3, // 👈 default to 3 columns
+}) => {
+  return (
+    <>
+      {title && (
+        <div className="text-sm font-semibold text-modalHeader mb-2">
+          {title}
+        </div>
+      )}
+      <div
+        className={`grid p-2 sm:grid-cols-1 h-full mb-4 gap-x-4 border border-border shadow-md md:grid-cols-${cols} ${className}`}
+      >
+        {children}
+      </div>
+    </>
+  );
+};
+
+export default CommonFormCard;
