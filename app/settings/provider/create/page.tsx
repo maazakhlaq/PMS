@@ -59,7 +59,7 @@ export default function ProviderCreation() {
       title="Create New Provider"
     >
       {/* Personal Information */}
-      <CommonFormCard title="Personal Information">
+      <CommonFormCard cols={3} title="Personal Information">
         <div className="grid gap-2">
           <div className="grid grid-cols-2 gap-2">
             <Input label="First Name" type="text" />

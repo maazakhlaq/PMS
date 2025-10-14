@@ -12,7 +12,7 @@ const CommonFormCard: React.FC<CommonFormCardProps> = ({
   children,
   className = "",
   title,
-  cols = 3, // 👈 default to 3 columns
+  cols = 3,
 }) => {
   return (
     <>
@@ -22,7 +22,7 @@ const CommonFormCard: React.FC<CommonFormCardProps> = ({
         </div>
       )}
       <div
-        className={`grid p-2 sm:grid-cols-1 h-full mb-4 gap-x-4 border border-border shadow-md md:grid-cols-${cols} ${className}`}
+        className={`grid p-2 sm:grid-cols-1  mb-4 gap-x-4 border border-border shadow-md md:grid-cols-${cols} ${className}`}
       >
         {children}
       </div>

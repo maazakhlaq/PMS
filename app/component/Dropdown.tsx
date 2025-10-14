@@ -20,9 +20,9 @@ const Dropdown: React.FC<InputProps> = ({ label, options, ...props }) => {
          focus:bg-gray-100 text-inputText
           placeholder-placeholder bg-inputBg disabled:bg-disabled"
       >
-        <option value="">Please Select {label}</option>
+        <option value="" key={'nu'}>Please Select {label}</option>
         {options.map((i: any) => (
-          <option key={i.id} value={i.id}>
+          <option key={i.id||i.label} value={i.id}>
             {i.label}
           </option>
         ))}

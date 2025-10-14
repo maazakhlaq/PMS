@@ -14,7 +14,7 @@ const Input: React.FC<InputProps> = ({ label, ...props }) => {
       )}
       <input
         {...props}
-        placeholder={'Enter ' +label}
+        placeholder={label&& 'Enter ' + label}
         className="px-2 py-1 h-6 border border-inputBorder text-xs 
          focus:outline-none
          focus:bg-gray-100 text-inputText

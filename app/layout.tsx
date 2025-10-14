@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./component/Header";
 import Sidebar from "./component/Sidebar";
 import { redirect } from "next/navigation";
+import { ReduxProvider } from "./ReduxProvider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -37,7 +38,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="flex flex-col bg-white h-screen overflow-hidden ">
+       <ReduxProvider>   <div className="flex flex-col bg-white h-screen overflow-hidden ">
           <Header />
           <div className="flex flex-1 overflow-hidden">
             <Sidebar />
@@ -45,7 +46,7 @@ export default function RootLayout({
               <div className="h-full overflow-hidden ">{children}</div>
             </main>
           </div>
-        </div>
+        </div></ReduxProvider>
       </body>
     </html>
   );
