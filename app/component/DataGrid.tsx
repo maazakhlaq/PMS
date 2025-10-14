@@ -19,8 +19,7 @@ export default function CommonDataGrid<T>({
   columns,
   data,
   initialPageSize = 5,
-  maxHeight = "400px",
-}: CommonDataGridProps<T>) {
+ }: CommonDataGridProps<T>) {
   const [pagination, setPagination] = React.useState({
     pageIndex: 0,
     pageSize: initialPageSize,

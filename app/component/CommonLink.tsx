@@ -1,4 +1,3 @@
-import { Croissant, Cross, CrossIcon } from "lucide-react";
 import Link, { LinkProps } from "next/link";
 import React from "react";
 

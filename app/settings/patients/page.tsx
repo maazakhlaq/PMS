@@ -53,7 +53,7 @@ const dummyPatients: Patient[] = [
 ];
 
 export default function PatientGridPage() {
-  const [data, setData] = useState<Patient[]>(dummyPatients);
+  const [data] = useState<Patient[]>(dummyPatients);
 
   return (
     <CommonCard

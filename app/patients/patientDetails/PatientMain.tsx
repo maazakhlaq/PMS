@@ -19,7 +19,7 @@ const tabs = [
 
 export default function PatientDetail() {
   const dispatch = useDispatch();
-  const { activeTab, patients, selectedPatient } = useSelector(
+  const { activeTab } = useSelector(
     (state: RootState) => state.patients
   );
 

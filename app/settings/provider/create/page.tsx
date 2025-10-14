@@ -12,9 +12,9 @@ import CheckBox from "@/app/component/CheckBox";
 import CommonFormCard from "@/app/component/CommonFormCard";
 
 export default function ProviderCreation() {
-  const [languages, setLanguages] = useState<string[]>([]);
-  const [specialties, setSpecialties] = useState<string[]>([]);
-  const [workingDays, setWorkingDays] = useState<string[]>([]);
+  const [languages, ] = useState<string[]>([]);
+  const [specialties, ] = useState<string[]>([]);
+  const [workingDays, ] = useState<string[]>([]);
 
 
     // Dropdown options as { label, value }

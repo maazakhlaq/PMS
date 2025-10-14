@@ -7,7 +7,7 @@ import CommonDataGrid from "@/app/component/DataGrid";
 
 import { ColumnDef } from "@tanstack/react-table";
 import { SearchCheck } from "lucide-react";
-import { useState } from "react";
+ 
 
 // Define patient type
 interface Patient {
@@ -107,7 +107,7 @@ function SearchPatient({ setData }: any) {
             <div className="ml-1 whitespace-nowrap">Search Patient</div>
           </div>
 
-          <CommonSearch placeholder="Search Patient Here..." />
+          <CommonSearch   />
         </div>
 
         <CommonDataGrid

@@ -10,8 +10,7 @@ import Button from "../component/Button";
 import NewAppointmentForm from "./NewAppointment";
  
  
-const size = 40;
-
+ 
 export default function Index() {
   const practiceOptions = [
     { label: "Physician", value: "physician" },

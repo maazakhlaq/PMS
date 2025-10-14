@@ -1,4 +1,4 @@
-import React, { ReactNode, SelectHTMLAttributes } from "react";
+import React, {  SelectHTMLAttributes } from "react";
 
 interface InputProps extends SelectHTMLAttributes<HTMLSelectElement> {
   label?: string;
@@ -14,7 +14,7 @@ const Dropdown: React.FC<InputProps> = ({ label, options, ...props }) => {
         </label>
       )}
       <select
-        {...props} // now you can still pass name, required, disabled, etc.
+        {...props}  
  className="px-1 py-1 h-6 border border-inputBorder text-xs 
          focus:outline-none
          focus:bg-gray-100 text-inputText

@@ -27,11 +27,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-    const token = true;
-
-  if (false) {
-    redirect("/settings"); // secure server-side redirect
-  }
+ 
+ 
   
   return (
     <html lang="en">

@@ -2,9 +2,7 @@
 
 import { useState } from "react";
 import { SearchCheck } from "lucide-react";
-import Button from "@/app/component/Button";
-
-import { ColumnDef } from "@tanstack/react-table";
+ 
 import PatientTabs from "./patientTabs/PatientTabs";
 import SearchPatient from "./Search/SearchPatient";
 import PatientDetail from "./patientDetails/PatientMain";

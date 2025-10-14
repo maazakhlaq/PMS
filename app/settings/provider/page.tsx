@@ -7,7 +7,7 @@ import CommonLink from "@/app/component/CommonLink";
 import Button from "@/app/component/Button";
  import { ColumnDef } from "@tanstack/react-table";
 import CommonDataGrid from "@/app/component/DataGrid";
-import Scheduler from "@/app/component/Scheduler";
+ 
 
 // Define provider type
 interface Provider {
@@ -54,7 +54,7 @@ const dummyProviders: Provider[] = [
 ];
 
 export default function ProviderGridPage() {
-  const [data, setData] = useState<Provider[]>(dummyProviders);
+  const [data] = useState<Provider[]>(dummyProviders);
 
   return (
     <CommonCard

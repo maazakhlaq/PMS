@@ -1,10 +1,7 @@
-import React, { InputHTMLAttributes } from "react";
+import React   from "react";
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-  label?: string;
-}
-
-const CommonSearch: React.FC<InputProps> = ({ label, ...props }) => {
+ 
+const CommonSearch: React.FC = ({  ...props }) => {
   return (
     
       

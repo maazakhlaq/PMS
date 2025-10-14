@@ -19,30 +19,7 @@ import { useState } from "react";
 import CommonFormCard from "@/app/component/CommonFormCard";
 
 const size = 40;
-const links = [
-  {
-    href: "/",
-    label: "Dashboard",
-    icon: <LayoutDashboard size={size} />,
-  },
-  {
-    href: "/Schedule",
-    label: "Schedule",
-    icon: <CalendarDays size={size} />,
-  },
-  { href: "/settings/patients", label: "Patients", icon: <Users size={size} /> },
-  {
-    href: "/appointments",
-    label: "Appointments",
-    icon: <ClipboardList size={size} />,
-  },
-  {
-    href: "/settings",
-    label: "Settings",
-    icon: <Settings size={size} />,
-  },
-];
-
+ 
 // Dropdown options
 const sexOptions = [
   { id: "male", label: "Male" },
