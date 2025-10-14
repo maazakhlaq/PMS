@@ -7,7 +7,6 @@ import CommonDataGrid from "@/app/component/DataGrid";
 
 import { ColumnDef } from "@tanstack/react-table";
 import { SearchCheck } from "lucide-react";
- 
 
 // Define patient type
 interface Patient {
@@ -62,7 +61,7 @@ const dummyPatients: Patient[] = [
   },
 ];
 
-function SearchPatient({ setData }: any) {
+function SearchPatient({ setData, setActive, setScreen }: any) {
   const columns: ColumnDef<Patient>[] = [
     { accessorKey: "id", header: "ID" },
     { accessorKey: "name", header: "Name" },
@@ -78,18 +77,24 @@ function SearchPatient({ setData }: any) {
         <div className="flex gap-2">
           <Button
             varient="primary"
-            onClick={() =>
-              setData((data: any) => [...data,  row.original ])
-            }
+            onClick={() => {
+              setData((data: any) =>
+                data.some((i: any) => i.id == row.original.id)
+                  ? data
+                  : [...data, row.original]
+              );
+              setActive(row.original.id);
+              setScreen(row.original.id);
+            }}
           >
-            Edit
+            View
           </Button>
-          <Button
+          {/* <Button
             varient="danger"
             onClick={() => alert(`Delete ${row.original.name}`)}
           >
-            Delete
-          </Button>
+            View
+          </Button> */}
         </div>
       ),
     },
@@ -107,7 +112,7 @@ function SearchPatient({ setData }: any) {
             <div className="ml-1 whitespace-nowrap">Search Patient</div>
           </div>
 
-          <CommonSearch   />
+          <CommonSearch />
         </div>
 
         <CommonDataGrid

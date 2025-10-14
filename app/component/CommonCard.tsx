@@ -10,7 +10,7 @@ interface CardProps {
 
 const CommonCard: React.FC<CardProps> = ({ title, icon, button,className, children }) => {
   return (
-    <div className="flex flex-col mt-1 rounded-md border border-border mx-2 shadow-md h-full">
+    <div className="flex flex-col mt-1 rounded-md border border-border h-full mx-2 shadow-md ">
       {/* Header */}
       <div className={`flex ${className} bg-header justify-between items-center p-1 border-purple-600
        border-b-2 text-sm text-white font-semibold `}>

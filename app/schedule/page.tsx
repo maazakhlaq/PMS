@@ -72,7 +72,7 @@ export default function Index() {
                     <div key={period} className="mb-4 font-medium text-sm">
                       {hours.map((hour) => (
                         <div key={`${period}-${hour}`}>
-                          {minutes.map((minute) => (
+                          {minutes.map((minute,index) => (
                             <div
                               key={`${period}-${hour}-${minute}`}
                               className="flex flex-row items-stretch w-full"
@@ -81,7 +81,7 @@ export default function Index() {
                               <div
                                 className="bg-lime-100 text-black my-1 rounded-lg 
                                h-24 w-24 border border-lime-300 
-                               flex items-center justify-center flex-shrink-0"
+                               flex items-center justify-center flex-shrink-0 cursor-pointer"
                               >
                                 {hour}:{minute.toString().padStart(2, "0")}{" "}
                                 {period}
@@ -90,7 +90,7 @@ export default function Index() {
                               {/* Extra section (only for hour 1 or 5) */}
                               {(hour === 1 || hour === 5) && (
                                 <div className="flex-1 bg-slate-400 m-1 rounded-md flex items-center justify-center text-white">
-                                  ${period}-${hour}-${minute}
+                                  Patient-{index+1}
                                 </div>
                               )}
                             </div>

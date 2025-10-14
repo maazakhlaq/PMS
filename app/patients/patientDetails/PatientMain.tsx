@@ -30,8 +30,8 @@ export default function PatientDetail() {
           <button
             key={tab}
             onClick={() => dispatch(setActiveTab(tab))}
-            className={`px-3 py-1 rounded ${
-              activeTab === tab ? "bg-purple-600 text-white" : "bg-gray-100"
+            className={`px-3 text-sm  font-medium  ml-2 py-1 shadow mt-2 rounded ${
+              activeTab === tab ? 'bg-slate-100':'bg-gray-200'
             }`}
           >
             {tab}
@@ -40,9 +40,9 @@ export default function PatientDetail() {
       </div>
 
       <div className="mt-4">
-        <h3 className="text-lg font-semibold">{activeTab} Info</h3>
+        <h3 className="text-base font-semibold">{activeTab} Info</h3>
          
       </div>
-    </div>
+    </div>  
   );
 }
